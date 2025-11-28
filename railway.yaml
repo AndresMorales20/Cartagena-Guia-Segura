@@ -4,11 +4,9 @@ services:
     env: php
     branch: main
     buildCommand: |
-      # Instala dependencias
       composer install --optimize-autoloader --no-dev
       npm install
       npm run prod
-      # Limpieza de caches de Laravel
       php artisan config:clear
       php artisan cache:clear
       php artisan route:clear
@@ -23,3 +21,7 @@ services:
         value: https://cartagena-guia-segura.onrailway.app
       - key: APP_KEY
         value: HsCh47ZWjU6+6Cw/WzMYom3j9VMDKe455ZXNLSFLglQ=
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: DB_DATABASE
+        value: /opt/render/project/src/database/database.sqlite
