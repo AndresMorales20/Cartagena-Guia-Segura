@@ -11,7 +11,7 @@ services:
       php artisan cache:clear
       php artisan route:clear
       php artisan view:clear
-    startCommand: php artisan serve --host=0.0.0.0 --port=$PORT
+    startCommand: sh -c 'php -S 0.0.0.0:$PORT -t public'
     envVars:
       - key: APP_ENV
         value: production
@@ -20,4 +20,4 @@ services:
       - key: APP_URL
         value: https://cartagena-guia-segura.onrender.com
       - key: APP_KEY
-        value: "HsCh47ZWjU6+6Cw/WzMYom3j9VMDKe455ZXNLSFLglQ="
+        value: HsCh47ZWjU6+6Cw/WzMYom3j9VMDKe455ZXNLSFLglQ=
