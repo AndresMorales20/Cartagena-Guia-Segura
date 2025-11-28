@@ -17,5 +17,5 @@ services:
       - key: APP_URL
         value: https://cartagena-guia-segura.onrender.com
       - key: APP_KEY
-        value: # Pega aquí tu APP_KEY generada localmente
+        value: base64:HsCh47ZWjU6+6Cw/WzMYom3j9VMDKe455ZXNLSFLglQ=
 
