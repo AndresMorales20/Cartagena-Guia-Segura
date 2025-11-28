@@ -1,0 +1,190 @@
+/* =========================================
+   Paleta de colores Colonial/Tropical
+========================================= */
+:root {
+    --cartagena-blue: #008c99;
+    --cartagena-terracota: #cc5500;
+    --cartagena-success: #38761d;
+    --cartagena-warning: #f1c232;
+    --cartagena-card-bg: #fff8f5;
+}
+
+/* =========================================
+   1. Fondo Temático
+========================================= */
+body {
+    background-color: #f5f5dc;
+    background-image: url('https://i.imgur.com/gK9qMvj.png');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* =========================================
+   2. Navbar
+========================================= */
+.navbar {
+    background-color: var(--cartagena-terracota) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+/* =========================================
+   3. Contenido general
+========================================= */
+.container-fluid, .p-3, .card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* =========================================
+   4. Cards
+========================================= */
+.card {
+    background-color: var(--cartagena-card-bg);
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.card-img-custom {
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.text-cartagena-terracota {
+    color: var(--cartagena-terracota) !important;
+}
+
+/* =========================================
+   5. Botones
+========================================= */
+.btn-cartagena-terracota {
+    background-color: var(--cartagena-terracota);
+    border-color: var(--cartagena-terracota);
+    color: white;
+}
+
+.btn-cartagena-terracota:hover {
+    background-color: #b04d00;
+    border-color: #b04d00;
+    color: white;
+}
+
+.btn-outline-cartagena-terracota {
+    color: var(--cartagena-terracota);
+    border-color: var(--cartagena-terracota);
+}
+
+.btn-outline-cartagena-terracota:hover {
+    background-color: var(--cartagena-terracota);
+    color: white;
+}
+
+.btn-teal {
+    background-color: var(--cartagena-blue);
+    border-color: var(--cartagena-blue);
+    color: white;
+    font-weight: bold;
+}
+
+.btn-teal:hover {
+    background-color: #006b7a;
+    border-color: #006b7a;
+    color: white;
+}
+
+/* =========================================
+   6. Etiquetas de estatus
+========================================= */
+.bg-cartagena-success {
+    background-color: var(--cartagena-success) !important;
+}
+
+.bg-cartagena-warning {
+    background-color: var(--cartagena-warning) !important;
+    color: #333 !important;
+}
+
+.location-info {
+    color: var(--cartagena-blue);
+    font-size: 0.95em;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* =========================================
+   7. Login styles
+========================================= */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.login-card {
+    background-color: var(--cartagena-card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.login-logo {
+    display: block;
+    margin: 0 auto 1rem;
+    max-height: 80px;
+}
+
+.form-input {
+    border-radius: 8px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* =========================================
+   8. Dark mode
+========================================= */
+body.dark-mode {
+    background-color: #121212;
+    color: #eee;
+}
+
+body.dark-mode .card,
+body.dark-mode .login-card {
+    background-color: #1e1e1e;
+    color: #eee;
+    border-color: #333;
+}
+
+body.dark-mode .form-input {
+    background-color: #333;
+    color: #eee;
+    border-color: #555;
+}
+
+body.dark-mode .form-input::placeholder {
+    color: #ccc;
+}
+
+/* =========================================
+   9. Filtros
+========================================= */
+#filter-buttons .btn.active {
+    background-color: var(--cartagena-terracota) !important;
+    border-color: var(--cartagena-terracota) !important;
+    color: white !important;
+}
