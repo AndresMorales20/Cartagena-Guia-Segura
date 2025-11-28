@@ -4,9 +4,11 @@ services:
     env: php
     branch: main
     buildCommand: |
+      # Instala dependencias
       composer install --optimize-autoloader --no-dev
       npm install
       npm run prod
+      # Limpieza de caches de Laravel
       php artisan config:clear
       php artisan cache:clear
       php artisan route:clear
