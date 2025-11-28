@@ -1,23 +1,21 @@
 services:
   - type: web
     name: cartagena-guia-segura
-    runtime: php
-    branch: main
+    env: php
     buildCommand: |
-      composer install --optimize-autoloader --no-dev
-      npm install
-      npm run prod
+      composer install --no-dev --optimize-autoloader
       php artisan config:clear
       php artisan cache:clear
       php artisan route:clear
       php artisan view:clear
-    startCommand: sh -c 'php -S 0.0.0.0:$PORT -t public'
+    startCommand: |
+      sh -c 'php -S 0.0.0.0:$PORT -t public'
     envVars:
+      - key: APP_KEY
+        sync: false
       - key: APP_ENV
         value: production
       - key: APP_DEBUG
-        value: "false"
-      - key: APP_URL
-        value: https://cartagena-guia-segura.onrender.com
-      - key: APP_KEY
-        value: HsCh47ZWjU6+6Cw/WzMYom3j9VMDKe455ZXNLSFLglQ=
+        value: false
+      - key: LOG_CHANNEL
+        value: stderr
