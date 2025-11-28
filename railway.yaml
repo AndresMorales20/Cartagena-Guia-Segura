@@ -22,4 +22,4 @@ services:
       - key: APP_URL
         value: https://cartagena-guia-segura.onrailway.app
       - key: APP_KEY
-        value: "HsCh47ZWjU6+6Cw/WzMYom3j9VMDKe455ZXNLSFLglQ="
+        value: HsCh47ZWjU6+6Cw/WzMYom3j9VMDKe455ZXNLSFLglQ=
