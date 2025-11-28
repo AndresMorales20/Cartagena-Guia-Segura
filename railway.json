@@ -22,6 +22,14 @@
     {
       "key": "APP_KEY",
       "value": "HsCh47ZWjU6+6Cw/WzMYom3j9VMDKe455ZXNLSFLglQ="
+    },
+    {
+      "key": "DB_CONNECTION",
+      "value": "sqlite"
+    },
+    {
+      "key": "DB_DATABASE",
+      "value": "/opt/render/project/src/database/database.sqlite"
     }
   ]
 }
