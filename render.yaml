@@ -1,1 +1,21 @@
+services:
+  - type: web
+    name: cartagena-guia-segura
+    env: php
+    branch: main
+    buildCommand: |
+      composer install --optimize-autoloader --no-dev
+      php artisan key:generate
+      npm install
+      npm run prod
+    startCommand: php artisan serve --host=0.0.0.0 --port=$PORT
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: APP_URL
+        value: https://cartagena-guia-segura.onrender.com
+      - key: APP_KEY
+        value: # Pega aquí tu APP_KEY generada localmente
 
